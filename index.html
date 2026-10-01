@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HydroSmart - Everyday Water Problems & Smart Solutions</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        ocean: {
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -21,24 +48,24 @@
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-ocean-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
-                    <i class="fa-solid font-bold fa-droplet text-xl"></i>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 to-ocean-600 flex items-center justify-center text-white shadow-md shadow-brand-500/30 border border-brand-500/30">
+                    <i class="fa-solid font-bold fa-droplet text-xl text-blue-500"></i>
                 </div>
-                <span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-brand-800 via-brand-600 to-ocean-600 bg-clip-text text-transparent">HydroSmart</span>
+                <span class="text-2xl font-extrabold tracking-tight text-slate-900">HydroSmart</span>
             </div>
-            
-            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600 text-sm">
-                <a href="#solutions" class="hover:text-brand-600 transition-colors">Problems & Solutions</a>
-                <a href="#calculator" class="hover:text-brand-600 transition-colors">Leak Calculator</a>
-                <a href="#products" class="hover:text-brand-600 transition-colors">Smart Tech & Hacks</a>
-                <a href="#pledge" class="hover:text-brand-600 transition-colors">Community Pledge</a>
+
+            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-700 text-sm">
+                <a href="#solutions" class="hover:text-brand-700 transition-colors">Problems & Solutions</a>
+                <a href="#calculator" class="hover:text-brand-700 transition-colors">Leak Calculator</a>
+                <a href="#products" class="hover:text-brand-700 transition-colors">Smart Tech & Hacks</a>
+                <a href="#pledge" class="hover:text-brand-700 transition-colors">Community Pledge</a>
             </div>
 
             <div class="flex items-center space-x-4">
-                <a href="#calculator" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-ocean-500 hover:from-brand-700 hover:to-ocean-600 shadow-md shadow-brand-500/20 transition-all transform hover:-translate-y-0.5">
-                    <i class="fa-solid fa-calculator mr-2"></i> Calculate Waste
+                <a href="#calculator" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-semibold text-black bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-500/25 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-calculator mr-2 text-blue-500"></i> Calculate Waste
                 </a>
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none p-2" aria-label="Toggle Menu">
+                <button id="mobile-menu-btn" class="md:hidden bg-slate-100 text-slate-700 hover:text-slate-900 focus:outline-none p-2 rounded-lg" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -46,10 +73,10 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
-            <a href="#solutions" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Problems & Solutions</a>
-            <a href="#calculator" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Leak Calculator</a>
-            <a href="#products" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Smart Tech & Hacks</a>
-            <a href="#pledge" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Community Pledge</a>
+            <a href="#solutions" class="block py-2 text-slate-700 hover:text-brand-700 font-medium">Problems & Solutions</a>
+            <a href="#calculator" class="block py-2 text-slate-700 hover:text-brand-700 font-medium">Leak Calculator</a>
+            <a href="#products" class="block py-2 text-slate-700 hover:text-brand-700 font-medium">Smart Tech & Hacks</a>
+            <a href="#pledge" class="block py-2 text-slate-700 hover:text-brand-700 font-medium">Community Pledge</a>
         </div>
     </nav>
 
@@ -63,8 +90,8 @@
 
         <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center relative z-10">
             <div class="md:col-span-7 space-y-6 text-center md:text-left">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-200 text-xs sm:text-sm font-medium">
-                    <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-medium">
+                    <span class="w-2 h-2 rounded-full bg-teal-300 animate-ping"></span>
                     Everyday Water Problems. Smart, Simple Solutions.
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none">
@@ -74,10 +101,10 @@
                     Fix stealthy leaks, lower utility bills, and optimize your home with practical DIY fixes and modern eco-tech. No hassle, just instant savings.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
-                    <a href="#solutions" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-brand-900 font-bold hover:bg-teal-50 transition-all shadow-xl hover:shadow-2xl text-center">
+                    <a href="#solutions" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-slate-900 font-bold hover:bg-teal-50 transition-all shadow-xl hover:shadow-2xl text-center border border-white/80">
                         Explore Solutions <i class="fa-solid fa-arrow-right ml-2"></i>
                     </a>
-                    <a href="#calculator" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-800/60 backdrop-blur-md border border-white/20 text-white font-semibold hover:bg-brand-800/80 transition-all text-center">
+                    <a href="#calculator" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-700/90 backdrop-blur-md border border-white/20 text-white font-semibold hover:bg-brand-800 transition-all text-center">
                         Try Cost Calculator
                     </a>
                 </div>
@@ -111,7 +138,7 @@
                         </div>
                     </div>
 
-                    <a href="#calculator" class="mt-6 w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-center font-bold text-sm block transition-colors">
+                    <a href="#calculator" class="mt-6 w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-blue-500 text-center font-bold text-sm block transition-colors">
                         Calculate Your Specific Losses
                     </a>
                 </div>
@@ -128,19 +155,19 @@
             
             <!-- Category Filter Buttons -->
             <div class="flex flex-wrap items-center justify-center gap-2 mt-8" id="filter-buttons">
-                <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-brand-600 text-white shadow-md">
+                <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-brand-600 text-black shadow-md">
                     All Problems
                 </button>
-                <button data-filter="bills" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">
+                <button data-filter="bills" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
                     <i class="fa-solid fa-file-invoice-dollar mr-1.5 text-emerald-500"></i> High Utility Bills
                 </button>
-                <button data-filter="bathroom" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">
+                <button data-filter="bathroom" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
                     <i class="fa-solid fa-bath mr-1.5 text-sky-500"></i> Bathroom
                 </button>
-                <button data-filter="kitchen" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">
+                <button data-filter="kitchen" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
                     <i class="fa-solid fa-sink mr-1.5 text-amber-500"></i> Kitchen
                 </button>
-                <button data-filter="outdoor" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">
+                <button data-filter="outdoor" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
                     <i class="fa-solid fa-seedling mr-1.5 text-teal-500"></i> Lawn & Garden
                 </button>
             </div>
@@ -164,7 +191,7 @@
                     
                     <div class="space-y-3 text-sm mb-6">
                         <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-400">Root Cause</span>
+                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-600">Root Cause</span>
                             <span class="text-slate-600">Worn-out flapper seal or misadjusted fill valve floating mechanism.</span>
                         </div>
                         <div class="bg-brand-50/60 p-3 rounded-xl border border-brand-100/60">
@@ -174,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
                     <div class="flex items-center text-emerald-600">
                         <i class="fa-solid fa-droplet-slash mr-1.5 text-sm"></i> Up to 200 gal/day
                     </div>
@@ -200,7 +227,7 @@
                     
                     <div class="space-y-3 text-sm mb-6">
                         <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-400">Root Cause</span>
+                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-600">Root Cause</span>
                             <span class="text-slate-600">Water sitting in long pipe runs cools down between uses.</span>
                         </div>
                         <div class="bg-brand-50/60 p-3 rounded-xl border border-brand-100/60">
@@ -210,7 +237,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
                     <div class="flex items-center text-emerald-600">
                         <i class="fa-solid fa-droplet-slash mr-1.5 text-sm"></i> Up to 12 gal/day
                     </div>
@@ -236,7 +263,7 @@
                     
                     <div class="space-y-3 text-sm mb-6">
                         <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-400">Root Cause</span>
+                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-600">Root Cause</span>
                             <span class="text-slate-600">Outdated 2.5+ GPM showerheads or mineral scale clogging nozzles.</span>
                         </div>
                         <div class="bg-brand-50/60 p-3 rounded-xl border border-brand-100/60">
@@ -246,7 +273,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
                     <div class="flex items-center text-emerald-600">
                         <i class="fa-solid fa-droplet-slash mr-1.5 text-sm"></i> ~2,900 gal/yr
                     </div>
@@ -272,7 +299,7 @@
                     
                     <div class="space-y-3 text-sm mb-6">
                         <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-400">Root Cause</span>
+                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-600">Root Cause</span>
                             <span class="text-slate-600">Watering during midday heat (evaporation) or fixed timers running in rain.</span>
                         </div>
                         <div class="bg-brand-50/60 p-3 rounded-xl border border-brand-100/60">
@@ -282,7 +309,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
                     <div class="flex items-center text-emerald-600">
                         <i class="fa-solid fa-droplet-slash mr-1.5 text-sm"></i> ~7,500 gal/yr
                     </div>
@@ -308,7 +335,7 @@
                     
                     <div class="space-y-3 text-sm mb-6">
                         <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-400">Root Cause</span>
+                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-600">Root Cause</span>
                             <span class="text-slate-600">Degraded rubber washer or worn internal ceramic cartridge.</span>
                         </div>
                         <div class="bg-brand-50/60 p-3 rounded-xl border border-brand-100/60">
@@ -318,7 +345,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
                     <div class="flex items-center text-emerald-600">
                         <i class="fa-solid fa-droplet-slash mr-1.5 text-sm"></i> ~1,500 gal/yr
                     </div>
@@ -344,7 +371,7 @@
                     
                     <div class="space-y-3 text-sm mb-6">
                         <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-400">Root Cause</span>
+                            <span class="font-semibold text-slate-800 block text-xs uppercase text-slate-600">Root Cause</span>
                             <span class="text-slate-600">Continuous open stream averaging 2.2 gallons per minute.</span>
                         </div>
                         <div class="bg-brand-50/60 p-3 rounded-xl border border-brand-100/60">
@@ -354,7 +381,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
                     <div class="flex items-center text-emerald-600">
                         <i class="fa-solid fa-droplet-slash mr-1.5 text-sm"></i> ~5,000 gal/yr
                     </div>
@@ -510,7 +537,7 @@
                     <h4 class="text-lg font-bold text-slate-900 mt-1 mb-2">High-Pressure Aerated Showerhead</h4>
                     <p class="text-sm text-slate-600 mb-4">Mixes air into water stream to maintain strong spray pressure while saving 30% water volume.</p>
                     <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                        <span class="text-xs font-semibold text-slate-500">Est. Cost: $20 - $35</span>
+                        <span class="text-xs font-semibold text-slate-700">Est. Cost: $20 - $35</span>
                         <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">Payback: 3 Mo</span>
                     </div>
                 </div>
@@ -523,7 +550,7 @@
                     <h4 class="text-lg font-bold text-slate-900 mt-1 mb-2">Smart WiFi Hose & Sprinkler Timer</h4>
                     <p class="text-sm text-slate-600 mb-4">Connects to weather services to automatically skip watering schedules on rainy days.</p>
                     <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                        <span class="text-xs font-semibold text-slate-500">Est. Cost: $40 - $70</span>
+                        <span class="text-xs font-semibold text-slate-700">Est. Cost: $40 - $70</span>
                         <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">Payback: 4 Mo</span>
                     </div>
                 </div>
@@ -536,7 +563,7 @@
                     <h4 class="text-lg font-bold text-slate-900 mt-1 mb-2">1.0 GPM Dual-Thread Faucet Aerator</h4>
                     <p class="text-sm text-slate-600 mb-4">Simple 2-minute screw-on modification for bathroom sinks to cut flow rate in half without reducing usability.</p>
                     <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                        <span class="text-xs font-semibold text-slate-500">Est. Cost: $5 - $10</span>
+                        <span class="text-xs font-semibold text-slate-700">Est. Cost: $5 - $10</span>
                         <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">Payback: 1 Mo</span>
                     </div>
                 </div>
@@ -586,31 +613,31 @@
     </section>
 
     <!-- Interactive Community Pledge Tracker -->
-    <section id="pledge" class="py-20 bg-gradient-to-br from-brand-800 via-brand-700 to-ocean-800 text-white">
+    <section id="pledge" class="py-20 bg-gradient-to-br from-slate-900 via-brand-800 to-ocean-800 text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-200 text-xs font-semibold uppercase tracking-wider">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/30 backdrop-blur-md border border-white/20 text-white text-xs font-semibold uppercase tracking-wider">
                 <i class="fa-solid fa-earth-americas"></i> Global Impact
             </div>
             
-            <h2 class="text-3xl sm:text-5xl font-black tracking-tight">Take the HydroSmart Water Saver Pledge</h2>
+            <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white">Take the HydroSmart Water Saver Pledge</h2>
             <p class="text-slate-200 max-w-2xl mx-auto text-base sm:text-lg">
                 Join thousands of homeowners cutting waste. Click below to pledge 1 simple action today and add your estimated savings to our live global tracker.
             </p>
 
             <!-- Counter Box -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 max-w-2xl mx-auto shadow-2xl">
-                <span class="text-xs uppercase font-bold tracking-widest text-teal-200">Total Collective Water Saved</span>
-                <div class="text-4xl sm:text-6xl font-black text-white mt-2 mb-1 tracking-tight" id="global-counter">
+            <div class="bg-white/95 backdrop-blur-md border border-white/20 rounded-3xl p-8 max-w-2xl mx-auto shadow-2xl">
+                <span class="text-xs uppercase font-bold tracking-widest text-slate-700">Total Collective Water Saved</span>
+                <div class="text-4xl sm:text-6xl font-black text-slate-900 mt-2 mb-1 tracking-tight" id="global-counter">
                     1,248,920
                 </div>
-                <span class="text-sm font-medium text-teal-100">Gallons / Year Saved Worldwide</span>
+                <span class="text-sm font-medium text-slate-700">Gallons / Year Saved Worldwide</span>
 
-                <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <button id="pledge-btn" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-brand-900 font-extrabold hover:bg-teal-50 transition-all shadow-xl hover:scale-105 active:scale-95 flex items-center justify-center">
-                        <i class="fa-solid fa-hand-holding-droplet text-brand-600 text-lg mr-2"></i> Pledge 1 Habit Fix Today!
+                <div class="mt-8 pt-6 border-t border-slate-300/80 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button id="pledge-btn" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-700 text-white font-extrabold hover:bg-brand-800 transition-all shadow-xl hover:scale-105 active:scale-95 flex items-center justify-center">
+                        <i class="fa-solid fa-hand-holding-droplet text-white text-lg mr-2"></i> Pledge 1 Habit Fix Today!
                     </button>
                 </div>
-                <p id="pledge-msg" class="text-xs text-teal-200 mt-3 hidden">
+                <p id="pledge-msg" class="text-xs text-slate-700 mt-3 hidden">
                     🎉 Thank you! You added +2,500 gallons to the community savings goal!
                 </p>
             </div>
@@ -631,6 +658,6 @@
         </div>
     </footer>
 
-   
+    <script src="script.js"></script>
 </body>
 </html>
